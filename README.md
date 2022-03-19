@@ -1,2 +1,2 @@
 # Mooc.fi
-https://java-programming.mooc.fi/
+Courses from: https://www.mooc.fi/en/#courses
