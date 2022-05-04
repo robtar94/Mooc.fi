@@ -19,6 +19,21 @@ public class GreatestInList {
         
         System.out.println("");
 
-        // implement finding the greatest number in the list here
+        int greatest = list.get(0); // setting up the first element in the list as greatest.
+        
+        for (int i = 0; i < list.size(); i++) { // iterating over a list.
+            
+            int number = list.get(i);
+            
+            if(greatest > number) {
+                
+               number = greatest;
+            } else {
+                greatest = number;
+            }
+        }
+        
+         System.out.println("The greatest number: " + greatest);
+        
     }
 }
