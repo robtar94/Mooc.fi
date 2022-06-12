@@ -10,8 +10,8 @@ public class PersonalDetails {
         int years = 0;
         int count = 0;
         double avg = 0;
-        String name;
-        String longest;
+        String name= "";
+        String longest = "";
         
         while (true) {
             
@@ -33,11 +33,26 @@ public class PersonalDetails {
         
         name = parts[0];
         
+        if (longest.length() > name.length()) {
+            
+            name = longest;
+            
+        } else if (name.length() > longest.length()) {
+            
+            longest = name;
+        } else {
+            
+            name = longest;
+        }
+        
+        
+        
         
         
         
         }
-        System.out.println("Average: " + avg);
+        System.out.println("Average of the birth years: " + avg);
+        System.out.println("Longest name: " + longest);
         
         
 
