@@ -6,44 +6,38 @@ public class AgeOfTheOldest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
+        int max = 0;
         int age = 0;
-        
-        int greatest = 0;
         
         while (true) {
             
-            String name = scanner.nextLine();
+            String sentence = scanner.nextLine(); // reads a string
             
-            if (name.equals("")) {
+            if (sentence.equals("")) {
                 
-                break;
-            }
-            
-            
-            String[] parts = name.split(",");
-            
-            for (int i = 0; i < parts.length;i++) {
-                
-                age =  Integer.valueOf(parts[i]);
+                break; // breaks when empty line is entered.
                 
                 
-            }
-            
-             
-             }
-        
-                if (age > greatest) {
-                    
-                    System.out.println("Age of the oldest: " + age);
-                } else if (age < greatest) {
-                    
-                    System.out.println("Age of the oldest: " + greatest);
-                } else if (age == greatest){
-                    
-                    System.out.println("Age of the oldest: " + age);
                 }
+            
+            String parts[] = sentence.split(","); // takes every word seperately.
+            
+             age = Integer.valueOf(parts[1]); // gets age as integer type; eventually parse int
+            
+            if (age > max) {
+                max = age;
+            } else {
+                
+                age = max;
+            }
+        
+            
         }
-
-
+        
+        System.out.println("Age of the oldest: " + age);
+        
+        
+        
     }
+}
 
