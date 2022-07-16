@@ -11,7 +11,7 @@ public class PaymentCard {
     }
     
     public void eatAffordably(){
-        if(this.balance - 2.60 > 0){
+        if(this.balance - 2.60 >= 0){
         this.balance-=2.60;
         } else {
             this.balance = this.balance;
@@ -19,10 +19,22 @@ public class PaymentCard {
     }
     
     public void eatHeartily(){
-        if(this.balance - 4.60 > 0) {
+        if(this.balance - 4.60 >= 0) {
         this.balance -= 4.60;
         } else {
             this.balance = this.balance;
+        }
+    }
+    
+    public void addMoney(double amount) {
+        if(amount > 0) {
+        if (this.balance + amount < 150) {
+            this.balance = this.balance + amount;
+        } else if(this.balance + amount > 150) {
+            this.balance = 150;
+        } else if (this.balance + amount == 150) {
+        this.balance = 150;
+    }
         }
     }
     
